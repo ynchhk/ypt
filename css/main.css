@@ -13,3 +13,32 @@
     padding: var(--gap);
     background-color: var(--bg-secondary);
 }
+.sidebar-logo{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    padding: var(--gap);
+}
+.sidebar-logo span{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+
+}
+.navigation ul{
+    padding: 8px;
+}
+.navigation a{
+    display: flex;
+    color: var(--text-muted);
+    align-items: center;
+    gap: var(--gap);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    transition: all 0.4s ease;
+}
+.navigation a:hover{
+    background-color: var(--bg-card);
+    color : var(--text-primary);
+
+}
