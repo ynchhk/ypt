@@ -1,0 +1,15 @@
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width:240px;
+    height: 100vh;
+    background-color: var(--bg-primary);
+}
+.main{
+    flex: 1;
+    padding: var(--gap);
+    background-color: var(--bg-secondary);
+}
