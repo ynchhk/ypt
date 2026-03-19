@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>StudyFlow</title>
 </head>
 <body>
@@ -14,15 +15,42 @@
 <div class="app">
 <aside class = "sidebar">
     <div class="sidebar-logo">
-
+        <i data-lucide="book-open"></i>
+        <span>StudyFlow</span>
     </div>
+
     <nav class="navigation">
         <ul>
-            <li><a href="#">Timer</a></li>
-            <li><a href="#">To-do</a></li>
-            <li><a href="#">Statistics</a></li>
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Leaderboard</a></li>
+            <li>
+                <a href="#">
+                    <i data-lucide="timer"></i>
+                    <span>Timer</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="list-todo"></i>
+                    <span>To-do</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="chart-line"></i>
+                    <span>Statistics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="users-round"></i>
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="trophy"></i>
+                    <span>Leaderboard</span>
+                </a>
+            </li>
         </ul>
 
     </nav>
@@ -45,5 +73,8 @@
     </section>
 </main>
 </div>
+<script>
+    lucide.createIcons();
+</script>
 </body>
 </html>
