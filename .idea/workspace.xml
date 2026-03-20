@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1773768612938" duration="3410000" />
       <workItem from="1773952590392" duration="2626000" />
       <workItem from="1774026459654" duration="4369000" />
-      <workItem from="1774038440554" duration="2230000" />
+      <workItem from="1774038440554" duration="4131000" />
     </task>
     <servers />
   </component>

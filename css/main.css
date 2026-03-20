@@ -69,7 +69,7 @@ button {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
 }
-.resume{
+#btn-resume{
     background-color: var(--accent);
     border:none ;
 }
