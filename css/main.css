@@ -73,6 +73,14 @@ button {
     background-color: var(--accent);
     border:none ;
 }
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--gap);
+    padding-top: var(--gap);
+    border-bottom: 1px solid var(--bg-secondary);
+}
 
 
 .sidebar-logo{
@@ -80,6 +88,11 @@ button {
     flex-direction: row;
     gap: var(--gap);
     padding: var(--gap);
+
+}
+.todo-text {
+    flex: 1;
+    padding: 0 var(--gap);
 }
 .sidebar-logo span{
     font-size: 18px;
@@ -102,5 +115,33 @@ button {
 .navigation a:hover{
     background-color: var(--bg-card);
     color : var(--text-primary);
+}
+.card-header{
+    padding: var(--gap);
+}
+.stat-item-name{
+    color: var(--text-muted);
 
 }
+.stats-time{
+    color : var(--text-primary);
+    font-size: 60px;
+
+}
+.stats-row {
+    display: flex;
+    gap: 32px;
+}
+.today-stat{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-item{
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
