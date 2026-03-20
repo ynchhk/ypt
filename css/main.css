@@ -60,7 +60,7 @@
 .timer-controls{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: var(--gap);
 }
 
 button {
@@ -137,11 +137,13 @@ button {
     flex-direction: column;
     gap: 8px;
 }
-
 .stat-item{
     display: flex;
     flex-direction: column;
 
     align-items: flex-start;
+}
+.activity-chart{
+    min-height: 200px;
 }
 
