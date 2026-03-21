@@ -1,3 +1,4 @@
+ck
 let seconds = 0;
 const saved = localStorage.getItem('seconds');
 if (saved) {
@@ -18,7 +19,10 @@ function updateDisplay() {
     display.textContent = `${h}:${m}:${s}`;
 }
 btnResume.addEventListener('click', ()=>{isRunning = true;
-btnResume.textContent = 'Resume'});
+btnResume.textContent = 'Resume'
+    todayStats.sessions++
+    saveStats()
+});
 
 btnPause.addEventListener('click', ()=>{isRunning = false;});
 btnStop.addEventListener('click', ()=>{
@@ -33,6 +37,8 @@ setInterval(() => {
         seconds++;
         updateDisplay()
         localStorage.setItem('seconds', seconds);
+        todayStats.totalSeconds++
+        saveStats();
     }
 },1000)
 updateDisplay()
