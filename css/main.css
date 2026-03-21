@@ -146,4 +146,8 @@ button {
 .activity-chart{
     min-height: 200px;
 }
+.todo-text.completed {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
 
