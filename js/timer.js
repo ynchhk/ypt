@@ -1,6 +1,6 @@
-ck
+
 let seconds = 0;
-const saved = localStorage.getItem('seconds');
+let saved = localStorage.getItem('seconds');
 if (saved) {
     seconds = parseInt(saved);
 }
@@ -28,6 +28,7 @@ btnPause.addEventListener('click', ()=>{isRunning = false;});
 btnStop.addEventListener('click', ()=>{
     isRunning = false;
     seconds = 0;
+    localStorage.setItem('seconds',0)
     updateDisplay()
     btnResume.textContent = 'Start'
 });
