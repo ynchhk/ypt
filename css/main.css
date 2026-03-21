@@ -151,4 +151,30 @@ button {
     text-decoration: line-through;
     color: var(--text-muted);
 }
+.todo-list {
+    overflow-y: auto;
+    max-height: 150px;
+}
+/* Ширина скроллбара */
+.todo-list::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+/* Фон дорожки */
+.todo-list::-webkit-scrollbar-track {
+    background: var(--bg-card);
+}
+
+/* Сам ползунок */
+.todo-list::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 10px;
+    width: 3px;
+}
+
+/* Ползунок при наведении */
+.todo-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
 
