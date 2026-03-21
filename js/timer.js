@@ -1,4 +1,8 @@
 let seconds = 0;
+const saved = localStorage.getItem('seconds');
+if (saved) {
+    seconds = parseInt(saved);
+}
 let isRunning = false;
 const btnResume = document.querySelector('#btn-resume')
 const btnPause = document.querySelector('#btn-pause')
@@ -28,6 +32,7 @@ setInterval(() => {
     if (isRunning) {
         seconds++;
         updateDisplay()
+        localStorage.setItem('seconds', seconds);
     }
 },1000)
 updateDisplay()
