@@ -1,5 +1,147 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=app.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>StudyFlow</title>
 </head>
+<body>
+
+<div class="app">
+<aside class = "sidebar">
+    <div class="sidebar-logo">
+        <i data-lucide="book-open"></i>
+        <span>StudyFlow</span>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <i data-lucide="timer"></i>
+                    <span>Timer</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="list-todo"></i>
+                    <span>To-do</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="chart-line"></i>
+                    <span>Statistics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="users-round"></i>
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i data-lucide="trophy"></i>
+                    <span>Leaderboard</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="sidebar-footer">
+
+    </div>
+</aside>
+<main class="main">
+    <section class="current-session">
+        <div class="card-header">
+            <span class="header-name">Current Sesion</span>
+            <div class = "header-goal">
+                <span class="header-name">Goal</span>
+                <span class = "goal-time">90 minutes</span>
+            </div>
+
+        </div>
+
+        <h2>Math</h2>
+        <p>Запускайте таймер))</p>
+        <div class="timer-display">
+            <span>00:00:00</span>
+        </div>
+        <div class="timer-controls">
+            <button id="btn-resume">Start</button>
+            <button id="btn-pause">Pause</button>
+            <button id="btn-stop">Stop</button>
+        </div>
+
+    </section>
+    <section class="todo">
+        <div class="card-header">
+            <h2>To do</h2>
+            <button id="btn-add">Add task</button>
+        </div>
+        <p class = "tasks-num">4 tasks for today</p>
+        <ul class="todo-list">
+
+
+        </ul>
+    </section>
+    <section class="today-stat">
+    <div class="card-header">
+        <h2>Today's Stats</h2>
+        <p>Weekly Avg: 3h 12m</p>
+    </div>
+    <p>Summary of today's activity</p>
+
+    <div class="stats-time">
+        <span id="stats-total-time">0h 00m</span>
+    </div>
+    <p>Total study time today</p>
+
+    <div class="stats-row">
+        <div class="stat-item">
+            <span class="stat-item-name">Sessions</span>
+            <span id="stats-sessions">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-item-name">Avg length</span>
+            <span id="stats-avg">0m</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-item-name">Focus rate</span>
+            <span>82%</span>
+        </div>
+    </div>
+</section>
+
+    <section class="week-activ">
+        <div class="card-header">
+            <div>
+                <h2>Weekly Activity</h2>
+                <p>Heatmap of study activity</p>
+            </div>
+            <button>Last 7 days</button>
+        </div>
+        <div class="activity-chart">
+            <canvas id="weekly-chart"></canvas>
+        </div>
+    </section>
+</main>
+</div>
+<script>
+    lucide.createIcons();
+</script>
+<script src="./js/stats.js"></script>
+
+<script src = "./js/timer.js">
+</script>
+<script src = "./js/todo.js"></script>
+</body>
 </html>
