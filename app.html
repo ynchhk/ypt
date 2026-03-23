@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>StudyFlow</title>
 </head>
 <body>
@@ -129,7 +130,7 @@
             <button>Last 7 days</button>
         </div>
         <div class="activity-chart">
-            <!-- сюда JS будет рисовать график -->
+            <canvas id="weekly-chart"></canvas>
         </div>
     </section>
 </main>

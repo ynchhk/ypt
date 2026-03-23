@@ -124,6 +124,15 @@ button {
     color: var(--text-muted);
 
 }
+.activity-chart {
+    position: relative;
+    height: 200px;
+}
+
+#weekly-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
 .stats-time{
     color : var(--text-primary);
     font-size: 60px;

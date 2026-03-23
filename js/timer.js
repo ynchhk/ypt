@@ -1,6 +1,7 @@
 
 let seconds = 0;
 let saved = localStorage.getItem('seconds');
+let tickcount = 0;
 if (saved) {
     seconds = parseInt(saved);
 }
@@ -21,6 +22,7 @@ function updateDisplay() {
 btnResume.addEventListener('click', ()=>{isRunning = true;
 btnResume.textContent = 'Resume'
     todayStats.sessions++
+    startTime = Date.now() - (seconds * 1000)
     saveStats()
 });
 
@@ -28,6 +30,7 @@ btnPause.addEventListener('click', ()=>{isRunning = false;});
 btnStop.addEventListener('click', ()=>{
     isRunning = false;
     seconds = 0;
+    saveStats()
     localStorage.setItem('seconds',0)
     updateDisplay()
     btnResume.textContent = 'Start'
@@ -35,11 +38,22 @@ btnStop.addEventListener('click', ()=>{
 
 setInterval(() => {
     if (isRunning) {
-        seconds++;
+        seconds = Math.floor((Date.now() - startTime) / 1000)
+        tickcount++
         updateDisplay()
         localStorage.setItem('seconds', seconds);
         todayStats.totalSeconds++
-        saveStats();
+
+
+        const today = new Date().toLocaleDateString('en-US', { weekday: 'short' })
+        if (weeklyData[today] !== undefined) {
+            weeklyData[today]++
+            localStorage.setItem('weeklyData', JSON.stringify(weeklyData))
+        }
+        if (tickcount % 60 === 0){
+            saveStats();
+            drawChart();
+        }
     }
 },1000)
 updateDisplay()
