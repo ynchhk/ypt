@@ -135,6 +135,23 @@
     </section>
 </main>
 </div>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <h3>New Task</h3>
+        <input type="text" id="modal-input" placeholder="Task name...">
+        <div class="modal-priority">
+            <span>Priority:</span>
+            <button class="priority-btn" data-priority="high">High</button>
+            <button class="priority-btn" data-priority="medium">Medium</button>
+            <button class="priority-btn" data-priority="low">Low</button>
+        </div>
+        <div class="modal-buttons">
+            <button id="modal-cancel">Cancel</button>
+            <button id="modal-confirm">Add Task</button>
+        </div>
+    </div>
+</div>
 <script>
     lucide.createIcons();
 </script>

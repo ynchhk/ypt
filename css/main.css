@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: row;
 }
+.todo-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 36px;
+
+}
 .sidebar{
     width:240px;
     height: 100vh;
@@ -36,6 +42,13 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+}
+.todo{
+    grid-row:1 / 3;
+    grid-column:2 / 3;
+}
+.today-stat{
+    grid-column:1 / 2;
 }
 .card-header{
 
@@ -75,6 +88,7 @@ button {
     border:none ;
 }
 .todo-item{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -187,3 +201,90 @@ button {
     background: var(--text-primary);
 }
 
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal{
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 32px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+#modal-input{
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    border: 1px solid var(--text-muted);
+    width: 100%;
+    color: var(--text-primary);
+}
+.modal-priority{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.priority-btn{
+    cursor: pointer;
+    border: 1px solid var(--text-muted);
+    border-radius: var(--radius);
+    padding: 6px 12px;
+}
+.modal-buttons{
+    display: flex;
+    gap: var(--gap);
+    justify-content: flex-end;
+
+}
+#modal-confirm{
+    color:var(--accent);
+}
+
+
+/* Создаём кастомный */
+.todo-item input[type="checkbox"] + .todo-text::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    border: 2px solid var(--text-muted);
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Когда отмечен — акцентный цвет и галочка */
+.todo-item input[type="checkbox"]:checked + .todo-text::before {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    content: '✓';
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: 16px;
+}
