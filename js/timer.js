@@ -34,6 +34,7 @@ btnStop.addEventListener('click', ()=>{
     localStorage.setItem('seconds',0)
     updateDisplay()
     btnResume.textContent = 'Start'
+
 });
 
 setInterval(() => {
@@ -47,12 +48,13 @@ setInterval(() => {
 
         const today = new Date().toLocaleDateString('en-US', { weekday: 'short' })
         if (weeklyData[today] !== undefined) {
-            weeklyData[today]++
-            localStorage.setItem('weeklyData', JSON.stringify(weeklyData))
-        }
+            weeklyData[today] ++;
         if (tickcount % 60 === 0){
+            localStorage.setItem('weeklyData', JSON.stringify(weeklyData))
             saveStats();
             drawChart();
+        }
+
         }
     }
 },1000)

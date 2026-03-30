@@ -6,7 +6,9 @@
 .todo-item input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    width: 36px;
+    margin-left: 18px;
+    width: 18px;
+    height: 18px;
 
 }
 .sidebar{
